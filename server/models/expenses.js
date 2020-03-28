@@ -6,7 +6,8 @@ const expenses = new Schema({
   name: String,
   totalAmount:Number,
   paidAmount:Number,
-  tag:String
+  tag:String,
+  userId:String
 });
 
 module.exports = mongoose.model("Expenses", expenses);

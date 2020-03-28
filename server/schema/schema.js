@@ -81,11 +81,10 @@ const ExpensesType = new GraphQLObjectType({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
     totalAmount: { type: GraphQLInt },
-    paidAmount: { type: GraphQLInt },
-    tag: { type: GraphQLString }
+    tag: { type: GraphQLString },
+    userId:{ type:GraphQLString }
   })
 });
-
 
 
 const RootQuery = new GraphQLObjectType({
@@ -212,14 +211,15 @@ const Mutation = new GraphQLObjectType({
         id: { type: GraphQLID },
         name: { type: new GraphQLNonNull(GraphQLString) },
         totalAmount: { type: new GraphQLNonNull(GraphQLInt) },
-        tag: { type: new GraphQLNonNull(GraphQLString) }
+        tag: { type: new GraphQLNonNull(GraphQLString) },
+        userId: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parent, args) {
         let expenses = new Expenses({
           name: args.name,
           totalAmount: args.totalAmount,
-          paidAmount: args.paidAmount,
           tag: args.tag,
+          userId:args.userId
         });
         return expenses.save();
       }
