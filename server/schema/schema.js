@@ -81,10 +81,8 @@ const ExpensesType = new GraphQLObjectType({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
     totalAmount: { type: GraphQLInt },
-    type: { type: GraphQLString },
     paidAmount: { type: GraphQLInt },
-    tag: { type: GraphQLString },
-    installment: { type: GraphQLInt }
+    tag: { type: GraphQLString }
   })
 });
 
@@ -214,19 +212,14 @@ const Mutation = new GraphQLObjectType({
         id: { type: GraphQLID },
         name: { type: new GraphQLNonNull(GraphQLString) },
         totalAmount: { type: new GraphQLNonNull(GraphQLInt) },
-        type: { type: new GraphQLNonNull(GraphQLString) },
-        paidAmount: { type: new GraphQLNonNull(GraphQLInt) },
-        tag: { type: new GraphQLNonNull(GraphQLString) },
-        installment: { type: new GraphQLNonNull(GraphQLInt) }
+        tag: { type: new GraphQLNonNull(GraphQLString) }
       },
       resolve(parent, args) {
         let expenses = new Expenses({
           name: args.name,
           totalAmount: args.totalAmount,
-          type: args.type,
           paidAmount: args.paidAmount,
           tag: args.tag,
-          installment: args.installment
         });
         return expenses.save();
       }
