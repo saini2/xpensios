@@ -4,6 +4,7 @@ import Home from "../../components/Home";
 
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import Profile from "../../components/Profile";
 
 
 // Apollo Client Setup
@@ -11,11 +12,18 @@ const client = new ApolloClient({
   uri: 'http://localhost:4000/query'
 });
 
-const routes = [{
-  path:'/',
-  component:Home,
-  exact:true
-}];
+const routes = [
+  {
+    path:'/',
+    component:Home,
+    exact:true
+  },
+  {
+    path: '/profile',
+    component: Profile,
+    exact: true
+  }
+];
 
 
 export class App extends React.Component {

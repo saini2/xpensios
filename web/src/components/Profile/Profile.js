@@ -6,23 +6,16 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 // Stylesheet Imports
-import styles from "./index.module.css";
+import styles from "./Profile.module.scss";
+import SiteLayout from "../../layouts/SiteLayout/SiteLayout";
 
 // Modules Import 
-import ApolloClient from "apollo-boost";
-import {ApolloProvider} from "react-apollo";
 
 // Component Import
-import BookList from "../BookList";
-import AddBook from "../AddBook";
 
 
-// Apollo Client Setup
-const client = new ApolloClient({
-  uri:'http://localhost:4000/query'
-});
 
-class Home extends Component {
+class Profile extends Component {
   componentDidMount = () =>{
     //
   }
@@ -30,19 +23,15 @@ class Home extends Component {
 
   render() {
     return (
-    // <ApolloProvider client={client}>
-    <div>
+      <SiteLayout>
       <h1>My Reading List</h1>
-      <BookList/>
-      <AddBook />
       
-    </div>)
-    // </ApolloProvider>);
+      </SiteLayout>)
   }
 
 }
 
 
 
-export default (Home);
+export default Profile;
 
