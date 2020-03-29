@@ -64,16 +64,6 @@ export default class Home extends React.PureComponent {
           <div className={s.profile}>
             <img className={s.image} src={profile} alt="profile"></img>
             <img className={s.bell} src={bell} alt="bell"></img>
-
-            <label className={s.switch}>
-              <input
-                type="checkbox"
-                onChange={e => this.handleChange(e)}
-                checked={this.state.smsNotification}
-                name={"sms"}
-              />
-              <span className={s.slider}></span>
-            </label>
           </div>
           <div className={s.balance}>
             <span> Current Balance</span>
