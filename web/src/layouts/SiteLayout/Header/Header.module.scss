@@ -1,0 +1,85 @@
+@import "../../../../commonStyles/variables.scss";
+
+.headerWrap {
+  left: 0;
+  right: 0;
+  z-index: 19;
+  top: 0;
+  background: $White;
+
+  &.normal {
+    // background: $lightGrey;
+    color: $TextCol;
+  }
+
+  .header {
+    color: black;
+    z-index: 1;
+    @extend .row;
+    @extend .fullWidth;
+    align-items: center;
+    box-sizing: border-box;
+   .pane{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        min-height: 60px;
+        img{
+            width: 55px;
+            height: 55px;
+            border-radius: 100px;
+            margin: 12px;
+        }
+    }
+
+    h1 {
+      @include fontStyle(18px, "", 600);
+      padding: 16px;
+      text-align: left;
+      flex: 1; // width: 68%;
+
+      .subText {
+        @include fontStyle(12px, $DGrey, 400);
+        @extend .show;
+
+        div {
+          display: inline-block;
+
+          i {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .link {
+      @include fontStyle(12px, false, 600);
+      padding: 6% 1%;
+      margin-left: auto;
+      max-width: 16%;
+      min-width: 16%;
+      text-align: center;
+      color: #00b9f5;
+    }
+
+    &.white {
+      background: $White;
+      color: $Black;
+    }
+
+    .text {
+      span {
+        @include fontStyle(12px, $LLBlack, 500);
+      }
+    }
+    .whiteText {
+      span {
+        @include fontStyle(12px, $White, 500);
+      }
+    }
+  }
+  .noBorder {
+    border: none;
+  }
+}
