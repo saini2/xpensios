@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <filter id="b" width="129.2%" height="129.2%" x="-14.6%" y="-14.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="6.5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.139124774 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <path id="a" d="M0 0h20v20H0z"/>
+        <mask id="c" width="20" height="20" x="0" y="0" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <path id="d" d="M6.667 16.25c.916 0 1.666-.75 1.666-1.667H5c0 .917.75 1.667 1.667 1.667zm5-5V7.083c0-2.558-1.359-4.7-3.75-5.266V1.25C7.917.558 7.358 0 6.667 0c-.692 0-1.25.558-1.25 1.25v.567c-2.384.566-3.75 2.7-3.75 5.266v4.167L0 12.917v.833h13.333v-.833l-1.666-1.667zM10 12.083H3.333v-5c0-2.066 1.259-3.75 3.334-3.75S10 5.017 10 7.083v5z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" filter="url(#b)" transform="translate(3.333 1.667)">
+        <mask id="e" fill="#fff">
+            <use xlink:href="#d"/>
+        </mask>
+        <use fill="#000" fill-rule="nonzero" xlink:href="#d"/>
+        <g fill="#536E92" mask="url(#e)">
+            <path d="M-3-2h20v20H-3z"/>
+        </g>
+    </g>
+</svg>
