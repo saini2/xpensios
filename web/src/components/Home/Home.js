@@ -2,18 +2,15 @@ import React from "react";
 import s from "./Home.module.scss";
 import profile from "../../images/avengers.jpg";
 import bell from "../../images/ic_warning_copy_5.svg";
-import shopping from "../../images/34627.png";
-import rent from "../../images/rent.png";
-import cash from "../../images/cash.png";
-import travel from "../../images/travel.png";
-import car from "../../images/car.png";
-
+import { IoIosCar } from "react-icons/io";
+import { FaShoppingCart ,FaMoneyBillWaveAlt} from "react-icons/fa";
+import { FiGift } from "react-icons/fi";
 export default class Home extends React.PureComponent {
   listOfSaving = () => {
     return (
       <div>
         <div className={s.listParent}>
-          <img className={s.carImage} src={car}></img>
+        <IoIosCar size = {45}></IoIosCar>
           <div>
             <div className={s.listName}>
               <span>New car</span>
@@ -27,7 +24,7 @@ export default class Home extends React.PureComponent {
           </div>
         </div>
         <div className={s.listParent}>
-          <img className={s.carImage} src={car}></img>
+        <IoIosCar size = {45}></IoIosCar>
           <div>
             <div className={s.listName}>
               <span>New car</span>
@@ -41,7 +38,7 @@ export default class Home extends React.PureComponent {
           </div>
         </div>
         <div className={s.listParent}>
-          <img className={s.carImage} src={car}></img>
+        <IoIosCar size = {45}></IoIosCar>
           <div>
             <div className={s.listName}>
               <span>New car</span>
@@ -75,19 +72,20 @@ export default class Home extends React.PureComponent {
           </div>
           <div className={s.logo}>
             <div className={s.shopping}>
-              <img className={s.image} src={shopping} alt="shopping" />
+            <FaShoppingCart size = {40} />
               {/* <span> shopping </span> */}
             </div>
             <div className={s.cash}>
-              <img className={s.image} src={cash} alt="cash" />
+              <FaMoneyBillWaveAlt size = {40}/>
               {/* <span> cash </span> */}
             </div>
             <div className={s.travel}>
-              <img className={s.image} src={travel} alt="travel" />
+              <FiGift size = {40}/>
               {/* <span> travel </span> */}
             </div>
             <div className={s.rent}>
-              <img className={s.image} src={rent} alt="rent" />
+            <FiGift size = {40}/>
+
               {/* <span> rent</span> */}
             </div>
           </div>

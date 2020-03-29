@@ -40,27 +40,19 @@
     width: 100%;
     .shopping {
       flex: 1;
-      .image {
-        width: 38px;
-      }
+      margin-left: 19px;
     }
     .cash {
       flex: 1;
-      .image {
-        width: 47px;
-      }
+      margin-left: 19px;
     }
     .travel {
       flex: 1;
-      .image {
-        width: 47px;
-      }
+      margin-left: 18px;
     }
     .rent {
       flex: 1;
-      .image {
-        width: 72px;
-      }
+      margin-left: 24px;
     }
   }
 }
