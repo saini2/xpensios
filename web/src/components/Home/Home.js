@@ -3,8 +3,8 @@ import s from "./Home.module.scss";
 import profile from "../../images/avengers.jpg";
 import bell from "../../images/ic_warning_copy_5.svg";
 import { IoIosCar } from "react-icons/io";
-import { FaShoppingCart ,FaMoneyBillWaveAlt} from "react-icons/fa";
-import { FiGift } from "react-icons/fi";
+import { FaRegPlusSquare, FaTags, FaEllipsisH } from "react-icons/fa";
+import { MdPool } from "react-icons/md";
 export default class Home extends React.PureComponent {
   listOfSaving = () => {
     return (
@@ -63,39 +63,43 @@ export default class Home extends React.PureComponent {
             <img className={s.bell} src={bell} alt="bell"></img>
           </div>
           <div className={s.balance}>
-            <span> Current Balance</span>
-            <span>Cash Avialiable</span>
-            <span>
-              <sup className={s.rupee}>₹</sup>
+            <div className={s.leftPane}>
+              <span>Current Balance</span>
+              <span>Cash Available</span>
+            </div>
+            <span className={s.amount}>
+              <span className={s.rupee}>₹</span>
               300000
             </span>
           </div>
           <div className={s.logo}>
             <div className={s.shopping}>
-            <FaShoppingCart size = {40} />
+              <FaRegPlusSquare size={40} />
               {/* <span> shopping </span> */}
             </div>
             <div className={s.cash}>
-              <FaMoneyBillWaveAlt size = {40}/>
+              <FaTags size={40} />
               {/* <span> cash </span> */}
             </div>
             <div className={s.travel}>
-              <FiGift size = {40}/>
+              <MdPool size={40} />
               {/* <span> travel </span> */}
             </div>
             <div className={s.rent}>
-            <FiGift size = {40}/>
+              <FaEllipsisH size={40} />
 
               {/* <span> rent</span> */}
             </div>
           </div>
         </div>
-        <div className={s.goalList}>
-          <span>Your Goals</span>
-          <span>All</span>
-          <span>Archived</span>
+        <div className={s.goalContainer}>
+          <div className={s.goalList}>
+            <span>Your Goals</span>
+            <span>All</span>
+            <span>Archived</span>
+          </div>
+          {this.listOfSaving()}
         </div>
-        {this.listOfSaving()}
       </div>
     );
   }

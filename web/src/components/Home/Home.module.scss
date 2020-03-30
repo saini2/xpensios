@@ -1,3 +1,6 @@
+body{
+  background:#eff0f2;
+}
 .container {
   margin-left: 16px;
   margin-right: 16px;
@@ -14,45 +17,57 @@
     }
   }
   .balance {
-    margin-top: 20px;
-    span:first-child {
-      font-size: 18px;
-      font-family: sans-serif;
-    }
-    span:nth-child(2) {
-      margin-left: 182px;
-      font-size: 13px;
-      color: grey;
-    }
-    span:nth-child(3) {
-      .rupee {
-        font-weight: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0px 25px 0px;
+    div.leftPane{
+      display: flex;
+      flex-direction: column;
+      span:first-child{
+        font-weight:700;
       }
-      font-size: 20px;
-      margin-left: 202px;
+      span:nth-child(2){
+        color:#9b9b9b;
+      }
+    }
+    span.amount {
+      .rupee {
+        font-weight: 700;
+      }
+      display: flex;
+      align-items: center;
+      font-size: 33px;
+      font-weight: 700;
     }
   }
   .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
     width: 100%;
-    .shopping {
-      flex: 1;
-      margin-left: 19px;
+    color:#fff;
+    div{
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      border-radius: 5px;
     }
-    .cash {
-      flex: 1;
-      margin-left: 19px;
+    div:first-child{
+      background-color: #5a9533;
     }
-    .travel {
-      flex: 1;
-      margin-left: 18px;
+    div:nth-child(2){
+      background-color: red;
     }
-    .rent {
-      flex: 1;
-      margin-left: 24px;
+    div:nth-child(3){
+      background-color: purple;
+    }
+    div:nth-child(4){
+      color:#9b9b9b;
+      background-color: white;
     }
   }
 }
@@ -62,9 +77,9 @@
   margin-right: 16px;
   display: flex;
   margin-top: 19px;
-  border: 2px solid lightgrey;
   padding: 10px;
   border-radius: 20px;
+  box-shadow: 1px 1px 16px 0px #9b9b9b70;
   .carImage {
     margin-top: 14px;
     width: 31px;
@@ -97,26 +112,34 @@
     }
   }
 }
-.goalList {
-  display: flex;
-  margin-top: 61px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
-  border-top: 2px solid lightgray;
-  padding: 10px;
-  border-radius: 20px;
-  span:first-child {
-    font-size: 18px;
-    font-family: sans-serif;
-    flex: 1;
-    margin-left: 19px;
-  }
-  span:nth-child(2) {
-    margin-right: 20px;
-  }
+.goalContainer{
+    background: #f7f7f7;
+    height: 100vh;
+    border-top: 0.5px solid lightgray;
+    border-radius: 37px;
+    margin-top: 25px;
+    padding-top: 15px;
+    box-shadow: 0px 10px 31px 2px #0006;
+  .goalList {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      span:first-child {
+        font-size: 18px;
+        font-family: sans-serif;
+        flex: 1;
+        margin-left: 19px;
+      }
+      span:nth-child(2) {
+        margin-right: 20px;
+      }
+    }
 }
+
 
 .switch {
   position: relative;
