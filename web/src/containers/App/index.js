@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "../../components/Home/Home";
-
+import NewEnrty from "../../components/NewEntry/NewEntry";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import Profile from "../../components/Profile";
@@ -15,7 +15,7 @@ const client = new ApolloClient({
 const routes = [
   {
     path:'/',
-    component:Home,
+    component:NewEnrty,
     exact:true
   },
   {

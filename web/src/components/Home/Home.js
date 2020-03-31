@@ -5,6 +5,7 @@ import bell from "../../images/ic_warning_copy_5.svg";
 import { IoIosCar } from "react-icons/io";
 import { FaRegPlusSquare, FaTags, FaEllipsisH } from "react-icons/fa";
 import { MdPool } from "react-icons/md";
+import FloatingButton from '../../shared/FloatingButton/FloatingButton';
 export default class Home extends React.PureComponent {
   listOfSaving = () => {
     return (
@@ -54,6 +55,9 @@ export default class Home extends React.PureComponent {
       </div>
     );
   };
+  newEntry = () => {
+
+  }
   render() {
     return (
       <div>
@@ -75,20 +79,15 @@ export default class Home extends React.PureComponent {
           <div className={s.logo}>
             <div className={s.shopping}>
               <FaRegPlusSquare size={40} />
-              {/* <span> shopping </span> */}
             </div>
             <div className={s.cash}>
               <FaTags size={40} />
-              {/* <span> cash </span> */}
             </div>
             <div className={s.travel}>
               <MdPool size={40} />
-              {/* <span> travel </span> */}
             </div>
             <div className={s.rent}>
               <FaEllipsisH size={40} />
-
-              {/* <span> rent</span> */}
             </div>
           </div>
         </div>
@@ -100,6 +99,11 @@ export default class Home extends React.PureComponent {
           </div>
           {this.listOfSaving()}
         </div>
+        <FloatingButton
+                classNameOuter={s.btnWrapper}
+                text={'new'}
+                onClick={() => this.moveToNewEntry()}
+              />
       </div>
     );
   }

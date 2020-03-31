@@ -1,0 +1,31 @@
+.floatingButton {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 30px;
+  z-index: 9;
+  .button {
+    font-weight: 800;
+    margin-left: 284px;
+    margin-bottom: 18px;
+    color: white;
+    font-size: 14px;
+    min-height: 40px;
+    padding: 0px 12px;
+    width: auto;
+    height: auto;
+    border-radius: 500px;
+    background-color: #00b9f5;
+    box-shadow: 0px 5px 13px 0 rgba(0, 0, 0, 0.14);
+    border: none;
+    .addImg {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      padding-right: 4px;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+}
