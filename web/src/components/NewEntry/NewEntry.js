@@ -22,13 +22,13 @@ export default class NewEnrty extends React.PureComponent {
                 <span>Enter your plan</span>
                 <span>Buy New Watch</span>
                 </div>
-                <div className = {s.box}>
+                <div className = {s.box2}>
                 <span>Amount</span>
                 <span>
                 <span className={s.rupee}>₹</span>
                     5000</span>
                 </div>
-                <div className = {s.box}>
+                <div className = {s.box2}>
                 <span>
                     Monthly contribution
                 </span>

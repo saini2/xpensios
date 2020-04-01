@@ -15,12 +15,17 @@ const client = new ApolloClient({
 const routes = [
   {
     path:'/',
-    component:NewEnrty,
+    component:Home,
     exact:true
   },
   {
     path: '/profile',
     component: Profile,
+    exact: true
+  },
+  {
+    path: '/newEntry',
+    component: NewEnrty,
     exact: true
   }
 ];

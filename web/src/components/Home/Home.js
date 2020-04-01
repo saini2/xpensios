@@ -6,7 +6,12 @@ import { IoIosCar } from "react-icons/io";
 import { FaRegPlusSquare, FaTags, FaEllipsisH } from "react-icons/fa";
 import { MdPool } from "react-icons/md";
 import FloatingButton from '../../shared/FloatingButton/FloatingButton';
+import NewEntry from '../NewEntry/NewEntry';
+
 export default class Home extends React.PureComponent {
+  state = {
+    modal : false
+  }
   listOfSaving = () => {
     return (
       <div>
@@ -55,8 +60,8 @@ export default class Home extends React.PureComponent {
       </div>
     );
   };
-  newEntry = () => {
-
+  moveToNewEntry = () => {
+    this.setState({modal : true})
   }
   render() {
     return (
@@ -102,8 +107,9 @@ export default class Home extends React.PureComponent {
         <FloatingButton
                 classNameOuter={s.btnWrapper}
                 text={'new'}
-                onClick={() => this.moveToNewEntry()}
+                onClick={this.moveToNewEntry()}
               />
+        {this.state.modal && this.NewEntry()}
       </div>
     );
   }
