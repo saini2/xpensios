@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "../../components/Home/Home";
-import NewEnrty from "../../components/NewEntry/NewEntry";
+import NewPost from "../../components/NewPost/NewPost";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 import Profile from "../../components/Profile";
-
+import HomePage from '../../components/HomePage/HomePage';
+import PostDetails from '../../components/PostDetails/PostDetails';
 
 // Apollo Client Setup
 const client = new ApolloClient({
@@ -14,8 +14,8 @@ const client = new ApolloClient({
 
 const routes = [
   {
-    path:'/',
-    component:Home,
+    path:'/newpost',
+    component:NewPost,
     exact:true
   },
   {
@@ -24,9 +24,14 @@ const routes = [
     exact: true
   },
   {
-    path: '/newEntry',
-    component: NewEnrty,
-    exact: true
+    path: '/',
+    component: HomePage,
+    exact : true
+  },
+  {
+    path: '/postdetails',
+    component:PostDetails,
+    exact : true
   }
 ];
 

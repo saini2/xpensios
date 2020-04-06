@@ -1,0 +1,50 @@
+.outer {
+  margin-left: 20px;
+  margin-right: 20px;
+  .desimage {
+    height: 171px;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .heading {
+    font-size: 26px;
+    font-weight: 700;
+    padding-bottom: 25px;
+  }
+  .outer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    .imageAuther {
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+    }
+    .auther {
+      margin-left: 14px;
+      .autherName {
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .time {
+        font-size: 11px;
+        span:nth-child(3) {
+          font-weight: 700;
+          font-size: 14px;
+          color: mediumvioletred;
+        }
+      }
+    }
+  }
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.content{
+  margin-top: 20px;
+}

@@ -1,0 +1,23 @@
+.background {
+  background-color: #f8f8ff;
+  .parent {
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    span:first-child {
+        font-weight: 600;
+    }
+    span:nth-child(2) {
+        margin-left: 116px;
+    }
+  }
+  .border{
+    border-bottom: 1px solid lightgray;
+    box-shadow: 1px 1px 16px 0px #9b9b9b70;
+    margin-bottom: 20px;
+  }
+}
