@@ -6,6 +6,9 @@ export default class HomePage extends React.PureComponent{
     postdetail = () =>{
         this.props.history.push('/postdetails');
     }
+    newPost = () =>{
+        this.props.history.push('/newpost');
+    }
     render(){
         return(
             <div className = {s.background}>
@@ -13,7 +16,7 @@ export default class HomePage extends React.PureComponent{
                 <span>
                 Immateapot
                 </span>
-                <span>
+                <span onClick = {() => this.newPost()}>
                     Write
                 </span>
                 <span>
